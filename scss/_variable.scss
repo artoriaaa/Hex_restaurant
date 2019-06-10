@@ -1,0 +1,48 @@
+/*-------顏色變數--------*/
+//base color
+	$darkcoffee:#3D1101;
+
+	$black:#000;
+	$lightgray:#efe9e7;
+	$white:rgba(255,255,255,.9);
+	$text-color:#3D1101;
+
+//font-family
+	$title-font-family:"'Lato', sans-serif";
+	$base-font-family:"'Oswald', sans-serif";
+
+//width
+	$width: 940px;
+//font-size
+	$fontsize:16px;
+	$font-m:20px;
+	$font-l:24px;
+		.font-r{
+			font-size:$fontsize;
+		}
+		.font-m{
+			font-size:$font-m;
+		}
+		.font-l{
+			font-size:$font-l;
+		}
+
+//background-color
+	.theme-color{
+		background : $darkcoffee;
+	}
+	.second-color{
+		background : $lightgray;
+	} 
+	
+//text color
+	.text-color{
+		color: $text-color;
+	}  
+	
+	.text-white{
+		color: $white;
+	}
+	.text-coffee{
+		color: $darkcoffee;
+	}

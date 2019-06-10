@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/*-------顏色變數--------*/
+.font-r {
+  font-size: 16px; }
+
+.font-m {
+  font-size: 20px; }
+
+.font-l {
+  font-size: 24px; }
+
+.theme-color {
+  background: #3D1101; }
+
+.second-color {
+  background: #efe9e7; }
+
+.text-color {
+  color: #3D1101; }
+
+.text-white {
+  color: rgba(255, 255, 255, 0.9); }
+
+.text-coffee {
+  color: #3D1101; }
+
+/*css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*-------mixin 常用技巧-------*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.hide-text {
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap; }
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+body {
+  font-family: 'MicrosoftJhengHeiRegular',微軟正黑體, sans-serif; }
+
+h3, h4, h5, h6, p {
+  color: #3D1101; }
+
+h3, h4, h5 {
+  text-align: center;
+  font-weight: bold; }
+
+p {
+  line-height: 1.2em; }
+
+.max-width {
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.fixed-width {
+  padding-left: 42px;
+  padding-right: 42px; }
+
+.header {
+  height: 420px;
+  background: url(../assets/header_desktop.png);
+  background-repeat: no-repeat; }
+  .header h1 {
+    float: left;
+    background: url(../assets/logo_w.svg);
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 24px;
+    margin-top: 16px; }
+
+.topbar {
+  background: rgba(0, 0, 0, 0.75); }
+
+.topmenu {
+  float: right; }
+  .topmenu li {
+    float: left; }
+    .topmenu li a {
+      display: block;
+      font-size: 16px;
+      padding: 18px 10px;
+      color: rgba(255, 255, 255, 0.9); }
+
+.banner-textBox {
+  max-width: 460px;
+  margin: 67px auto 0 auto;
+  padding: 20px 22px 20px 24px;
+  background: rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center; }
+  .banner-textBox h2 {
+    font-size: 48px;
+    font-size: 36px;
+    margin-bottom: 16px;
+    line-height: 1.2em; }
+  .banner-textBox p {
+    line-height: 1.2em;
+    color: rgba(255, 255, 255, 0.9); }
+
+.secret {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .secret h4 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 32px; }
+  .secret li {
+    width: 33.33333%;
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px; }
+    .secret li h5 {
+      font-size: 18px;
+      margin-bottom: 11px; }
+    .secret li .imgBox {
+      margin: 0 auto 20px auto;
+      max-width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      overflow: hidden; }
+
+.todayChef .imgBox {
+  max-width: 470px;
+  height: 460px;
+  float: left; }
+
+.todayChef .textBox {
+  float: left;
+  padding: 80px 0 80px 25px; }
+  .todayChef .textBox h6 {
+    color: #EFE9E7;
+    margin-bottom: 16px; }
+  .todayChef .textBox p {
+    max-width: 410px;
+    color: #EFE9E7; }
+
+.feedback {
+  padding: 50px 0; }
+  .feedback h4 {
+    margin-bottom: 32px;
+    font-size: 24px;
+    text-align: center; }
+  .feedback h6 {
+    font-size: 18px;
+    margin-bottom: 22px; }
+  .feedback p {
+    margin-bottom: 16px; }
+  .feedback span {
+    display: block;
+    text-align: right;
+    color: rgba(61, 17, 1, 0.75); }
+  .feedback ul li {
+    width: 33.33333%;
+    float: left; }
+    .feedback ul li .imgBox {
+      width: 67px;
+      height: 67px;
+      float: left;
+      border-radius: 60px;
+      overflow: hidden; }
+    .feedback ul li .textBox {
+      max-width: 300px;
+      padding-left: 79px; }
