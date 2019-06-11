@@ -30,17 +30,16 @@
 		padding-right: 42px;
 	}
 	.imgBox{
-		float: left;
+		 float: left;
 	}
 	.inline-block{
 		display: inline-block !important;
 	}
 
 
-//layout
+/*--layout-----------*/
 //header
      .header{
-    	
     	height: 420px;
     	background:url(../assets/header_desktop.png);
     	background-repeat: no-repeat;
@@ -53,7 +52,7 @@
 			margin-top: 16px;
 			
 	    }
-    }
+      }
       .topbar{
     	  background:rgba(0,0,0,.75);
        }
@@ -89,48 +88,65 @@
 				color:$white;
 			}
 	  }
-
 //footer
-.footer{
-	padding-top: 54px;
-	padding-bottom: 70px;
-	h1{
-		width: 245px;
-		height: 49px;
-		background:url(../assets/logo_l.svg);
-		background-repeat: no-repeat;
-	}
-	h4{
-		font-size: 24px;
-	    margin-bottom: 22px;
-	    text-align: left;
-	}
-	&>ul{
-		float: left;
+	.footer{
+		padding-top: 54px;
+		padding-bottom: 70px;
+		h1{
+			width: 245px;
+			height: 49px;
+			background:url(../assets/logo_l.svg);
+			background-repeat: no-repeat;
+			margin-bottom: 22px;
+		}
+		h4{
+			font-size: 24px;
+		    margin-bottom: 22px;
+		    text-align: left;
+
+		    display: table;
+		  }
 	}
 	.info{
 		float: left;
-		max-width: 31.25%;
-		padding-right: 20px;
-		
-	}
-	.contact{
-		list-style: disc;
+		//width: 62.5%;
 		li{
-			margin-bottom: 5px;
+			float: left;
+		}
+		.about{
+			max-width: 320px;
+			padding-right: 20px;
+		}
+		.contact{
+			max-width: 320px;
+			ul{
+				max-width: 220px;
+				list-style: disc;
+				list-style-position:inside;
+				display: inline-block;
+				li{
+					margin-bottom: 5px;
+				}
+			}
 		}
 	}
-}
-.rightBox{
-	float: right;
-}
+	.rightBox{
+		float: right;
+		text-align: right;
+	}
+	.mediaBox{
+		margin-right: 3px;
+		img{
+			margin-left: 11px;
+			width: 31px;
+		}
+	}
 
 
 
 
 
-//index content
-
+/*index content------*/
 //row-secret
 	 .secret{
 	     padding-top:50px;
@@ -151,6 +167,7 @@
 	 			margin-bottom: 11px;
 	 		}
 	 		.imgBox{
+	 			float: none;
 				margin: 0 auto 20px auto;
 	 			max-width: 200px;
 	 			height: 200px;
@@ -234,64 +251,58 @@
 		.imgBox{
 			max-width: 460px;
 		}
-		.reserveForm{
-			padding-left: 480px;
-			//max-width: 460px;
-			
-			color: $darkcoffee;
-			.submit{
-				background:$orange;
+	}
+	.reserveForm{
+		position: relative;
+		padding-left: 480px;
+		//max-width: 460px;
+		
+		color: $darkcoffee;
+		.submit{
+			background:$orange;
+		}
+		span{
+			margin-top: 5px;	
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		label{
+			margin-bottom: 6px;
+			display: block;
+			font-size: 14px;
+		}
+		input{
+			padding: 8px 12px;
+			margin-bottom: 12px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: inset 0px 1px 0px 0px #ECECEC;
+			-webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC;
+			&[type=text] {
+				width: 100%;
 			}
-			label{
-				margin-bottom: 6px;
-				display: block;
-				font-size: 14px;
+			&[type=email] {
+				width: 100%;
 			}
-			input{
-				padding: 5px 14px;
-				margin-bottom: 12px;
-				border: 1px solid #ccc;
-				border-radius: 5px;
-			
-				
-					
-				&[type=text] {
-					
-					width: 100%;
-
-					background: #FFFFFF;
-					border: 1px solid #CCCCCC;
-					box-shadow: inset 0px 1px 0px 0px #ECECEC;
-					border-radius: 3px;
-					box-shadow: inset 0px 1px 0px 0px #ECECEC;
-					-webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC;
-				}
-				&[type=email] {
-					width: 100%;
-					box-shadow: inset 0px 1px 0px 0px #ECECEC;
-					-webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC;
-				}
-				&[type=submit] {
-				    background: rgba(0,0,0,0.35);
-				    border:0 none;
-				    -webkit-border-radius: 5px;
-				    box-shadow: none;
-
-				    padding: 6px 22px;
-				    color: #fff;
-				    float: right;
-				    margin-left: 11px;
-
-
-				}
+			&[type=radio] {
+				margin-right: 36px;
 			}
-			span{
-				margin-bottom: 6px;
-				display: block;
-			}
-
+		}
+		button{
+    		padding: 10px 22px;
+			margin-left: 11px;
+			//float: right;
+		}
+		.submitButtons{
+			position: absolute;
+			bottom: 0;	
+			right: 0;	
 		}
 
 	}
+	
+				 
+
 
 

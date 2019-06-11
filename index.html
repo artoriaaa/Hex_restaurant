@@ -145,28 +145,31 @@
 
 			<span class="text-coffee">是否需要素食</span>
 			<label class="inline-block" for="">是</label>
-			<input type="checkbox" name="vegetYes">
+			<input type="radio" name="vegetYes">
 
 			<label class="inline-block" for="">否</label>
-			<input type="checkbox" name="vegetNo" ><br>
-
-			<input class="cancel" type="submit" value="取消">
-			<input class="submit"type="submit" value="送出">
+			<input type="radio" name="vegetNo" ><br>
+			
+			<div class="submitButtons clearfix">	
+				<button class="cancel" type="submit">取消</button>
+				<button class="submit" type="submit" >送出</button>
+			</div>
+			
 
 		</form>
   	 </div>
   </div>
 
   <div class="footer second-color">
-  	<div class="fixed-width">
-  		<ul>
-  			<li class="info">
+  	<div class="fixed-width clearfix">
+  		<ul class="info">
+  			<li class="about">
   				<h4>關於  六角西餐廳</h4>
   				<p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. </p>
   			</li>
-  			<li>
+  			<li class="contact">
   				<h4>聯絡方式</h4>
-  				<ul class="contact">
+  				<ul>
   					<li>高雄市中正五路到底</li>
   					<li>+886 886 886</li>
   					<li>service@hexschool.com</li>
@@ -175,6 +178,11 @@
   		</ul>
   		<div class="rightBox">
   			<h1 class="hide-text">六角西餐廳</h1>
+  			<div class="mediaBox">
+  				<img src="assets/gPlus.svg" alt="">
+  				<img src="assets/twitter.svg" alt="">
+  				<img src="assets/fb.svg" alt="">
+  			</div>
   		</div>
 
   	</div>

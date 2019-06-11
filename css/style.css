@@ -86,14 +86,54 @@ img {
   text-indent: 110%;
   white-space: nowrap; }
 
-input[type=submit] {
+/* Remove the inheritance of text transform in Edge, Firefox, and IE.
+	 * 1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+	 * Correct the inability to style clickable types in iOS and Safari.
+	 */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+	 * Remove the inner border and padding in Firefox.
+	 */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+	 * Restore the focus styles unset by the previous rule.
+	 */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+button[type=submit] {
   margin: 0;
-  padding: 0;
-  background: #e7e7e7;
-  border: 0 none;
+  padding: 6px 22px;
   cursor: pointer;
+  background: rgba(0, 0, 0, 0.35);
+  border: 0 none;
+  border-radius: 5px;
   -webkit-border-radius: 5px;
-  border-radius: 5px; }
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block; }
 
 * {
   box-sizing: border-box;
@@ -126,6 +166,7 @@ p {
 .inline-block {
   display: inline-block !important; }
 
+/*--layout-----------*/
 .header {
   height: 420px;
   background: url(../assets/header_desktop.png);
@@ -174,25 +215,42 @@ p {
     width: 245px;
     height: 49px;
     background: url(../assets/logo_l.svg);
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    margin-bottom: 22px; }
   .footer h4 {
     font-size: 24px;
     margin-bottom: 22px;
-    text-align: left; }
-  .footer > ul {
+    text-align: left;
+    display: table; }
+
+.info {
+  float: left; }
+  .info li {
     float: left; }
-  .footer .info {
-    float: left;
-    max-width: 31.25%;
+  .info .about {
+    max-width: 320px;
     padding-right: 20px; }
-  .footer .contact {
-    list-style: disc; }
-    .footer .contact li {
-      margin-bottom: 5px; }
+  .info .contact {
+    max-width: 320px; }
+    .info .contact ul {
+      max-width: 220px;
+      list-style: disc;
+      list-style-position: inside;
+      display: inline-block; }
+      .info .contact ul li {
+        margin-bottom: 5px; }
 
 .rightBox {
-  float: right; }
+  float: right;
+  text-align: right; }
 
+.mediaBox {
+  margin-right: 3px; }
+  .mediaBox img {
+    margin-left: 11px;
+    width: 31px; }
+
+/*index content------*/
 .secret {
   padding-top: 50px;
   padding-bottom: 50px; }
@@ -209,6 +267,7 @@ p {
       font-size: 18px;
       margin-bottom: 11px; }
     .secret li .imgBox {
+      float: none;
       margin: 0 auto 20px auto;
       max-width: 200px;
       height: 200px;
@@ -267,42 +326,38 @@ p {
     margin-bottom: 38px; }
   .reserve .imgBox {
     max-width: 460px; }
-  .reserve .reserveForm {
-    padding-left: 480px;
-    color: #3D1101; }
-    .reserve .reserveForm .submit {
-      background: #F56C23; }
-    .reserve .reserveForm label {
-      margin-bottom: 6px;
-      display: block;
-      font-size: 14px; }
-    .reserve .reserveForm input {
-      padding: 5px 14px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px; }
-      .reserve .reserveForm input[type=text] {
-        width: 100%;
-        background: #FFFFFF;
-        border: 1px solid #CCCCCC;
-        box-shadow: inset 0px 1px 0px 0px #ECECEC;
-        border-radius: 3px;
-        box-shadow: inset 0px 1px 0px 0px #ECECEC;
-        -webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC; }
-      .reserve .reserveForm input[type=email] {
-        width: 100%;
-        box-shadow: inset 0px 1px 0px 0px #ECECEC;
-        -webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC; }
-      .reserve .reserveForm input[type=submit] {
-        background: rgba(0, 0, 0, 0.35);
-        border: 0 none;
-        -webkit-border-radius: 5px;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        padding: 6px 22px;
-        color: #fff;
-        float: right;
-        margin-left: 11px; }
-    .reserve .reserveForm span {
-      margin-bottom: 6px;
-      display: block; }
+
+.reserveForm {
+  position: relative;
+  padding-left: 480px;
+  color: #3D1101; }
+  .reserveForm .submit {
+    background: #F56C23; }
+  .reserveForm span {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block; }
+  .reserveForm label {
+    margin-bottom: 6px;
+    display: block;
+    font-size: 14px; }
+  .reserveForm input {
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 0px 0px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC; }
+    .reserveForm input[type=text] {
+      width: 100%; }
+    .reserveForm input[type=email] {
+      width: 100%; }
+    .reserveForm input[type=radio] {
+      margin-right: 36px; }
+  .reserveForm button {
+    padding: 10px 22px;
+    margin-left: 11px; }
+  .reserveForm .submitButtons {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
