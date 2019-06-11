@@ -86,6 +86,15 @@ img {
   text-indent: 110%;
   white-space: nowrap; }
 
+input[type=submit] {
+  margin: 0;
+  padding: 0;
+  background: #e7e7e7;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box; }
@@ -93,7 +102,7 @@ img {
 body {
   font-family: 'MicrosoftJhengHeiRegular',微軟正黑體, sans-serif; }
 
-h3, h4, h5, h6, p {
+h3, h4, h5, h6, p, li, a {
   color: #3D1101; }
 
 h3, h4, h5 {
@@ -110,6 +119,12 @@ p {
 .fixed-width {
   padding-left: 42px;
   padding-right: 42px; }
+
+.imgBox {
+  float: left; }
+
+.inline-block {
+  display: inline-block !important; }
 
 .header {
   height: 420px;
@@ -151,6 +166,32 @@ p {
   .banner-textBox p {
     line-height: 1.2em;
     color: rgba(255, 255, 255, 0.9); }
+
+.footer {
+  padding-top: 54px;
+  padding-bottom: 70px; }
+  .footer h1 {
+    width: 245px;
+    height: 49px;
+    background: url(../assets/logo_l.svg);
+    background-repeat: no-repeat; }
+  .footer h4 {
+    font-size: 24px;
+    margin-bottom: 22px;
+    text-align: left; }
+  .footer > ul {
+    float: left; }
+  .footer .info {
+    float: left;
+    max-width: 31.25%;
+    padding-right: 20px; }
+  .footer .contact {
+    list-style: disc; }
+    .footer .contact li {
+      margin-bottom: 5px; }
+
+.rightBox {
+  float: right; }
 
 .secret {
   padding-top: 50px;
@@ -216,3 +257,52 @@ p {
     .feedback ul li .textBox {
       max-width: 300px;
       padding-left: 79px; }
+
+.reserve {
+  background: rgba(250, 250, 250, 0.7);
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .reserve h4 {
+    font-size: 24px;
+    margin-bottom: 38px; }
+  .reserve .imgBox {
+    max-width: 460px; }
+  .reserve .reserveForm {
+    padding-left: 480px;
+    color: #3D1101; }
+    .reserve .reserveForm .submit {
+      background: #F56C23; }
+    .reserve .reserveForm label {
+      margin-bottom: 6px;
+      display: block;
+      font-size: 14px; }
+    .reserve .reserveForm input {
+      padding: 5px 14px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px; }
+      .reserve .reserveForm input[type=text] {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        box-shadow: inset 0px 1px 0px 0px #ECECEC;
+        border-radius: 3px;
+        box-shadow: inset 0px 1px 0px 0px #ECECEC;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC; }
+      .reserve .reserveForm input[type=email] {
+        width: 100%;
+        box-shadow: inset 0px 1px 0px 0px #ECECEC;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC; }
+      .reserve .reserveForm input[type=submit] {
+        background: rgba(0, 0, 0, 0.35);
+        border: 0 none;
+        -webkit-border-radius: 5px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding: 6px 22px;
+        color: #fff;
+        float: right;
+        margin-left: 11px; }
+    .reserve .reserveForm span {
+      margin-bottom: 6px;
+      display: block; }
