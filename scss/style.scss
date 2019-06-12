@@ -247,6 +247,7 @@
 		h4{
 			font-size: $font-l;
 			margin-bottom: 38px;
+			line-height: 32px;
 		}
 		.imgBox{
 			max-width: 460px;
@@ -259,8 +260,12 @@
 		
 		color: $darkcoffee;
 		.submit{
-			background:$orange;
+			background:	$orange;
+			&:hover{
+				background:#ff9797;
+			}
 		}
+		
 		span{
 			margin-top: 5px;	
 			margin-bottom: 10px;
@@ -293,6 +298,9 @@
     		padding: 10px 22px;
 			margin-left: 11px;
 			//float: right;
+			&:hover{
+				background:	#ff9797;
+			}
 		}
 		.submitButtons{
 			position: absolute;

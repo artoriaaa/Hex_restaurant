@@ -15,6 +15,9 @@
 .second-color {
   background: #efe9e7; }
 
+.orange {
+  background: #F56C23; }
+
 .text-color {
   color: #3D1101; }
 
@@ -323,7 +326,8 @@ p {
   padding-bottom: 50px; }
   .reserve h4 {
     font-size: 24px;
-    margin-bottom: 38px; }
+    margin-bottom: 38px;
+    line-height: 32px; }
   .reserve .imgBox {
     max-width: 460px; }
 
@@ -333,6 +337,8 @@ p {
   color: #3D1101; }
   .reserveForm .submit {
     background: #F56C23; }
+    .reserveForm .submit:hover {
+      background: #ff9797; }
   .reserveForm span {
     margin-top: 5px;
     margin-bottom: 10px;
@@ -357,6 +363,8 @@ p {
   .reserveForm button {
     padding: 10px 22px;
     margin-left: 11px; }
+    .reserveForm button:hover {
+      background: #ff9797; }
   .reserveForm .submitButtons {
     position: absolute;
     bottom: 0;
