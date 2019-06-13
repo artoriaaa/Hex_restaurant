@@ -78,17 +78,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-/*-------mixin 常用技巧-------*/
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both; }
-
-.hide-text {
-  overflow: hidden;
-  text-indent: 110%;
-  white-space: nowrap; }
-
 /* Remove the inheritance of text transform in Edge, Firefox, and IE.
 	 * 1. Remove the inheritance of text transform in Firefox.
 */
@@ -125,6 +114,17 @@ button:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
+/*-------mixin 常用技巧-------*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.hide-text {
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap; }
+
 button[type=submit] {
   margin: 0;
   padding: 6px 22px;
@@ -137,37 +137,6 @@ button[type=submit] {
   box-shadow: none;
   color: #fff;
   display: inline-block; }
-
-* {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
-
-body {
-  font-family: 'MicrosoftJhengHeiRegular',微軟正黑體, sans-serif; }
-
-h3, h4, h5, h6, p, li, a {
-  color: #3D1101; }
-
-h3, h4, h5 {
-  text-align: center;
-  font-weight: bold; }
-
-p {
-  line-height: 1.2em; }
-
-.max-width {
-  max-width: 1024px;
-  margin: 0 auto; }
-
-.fixed-width {
-  padding-left: 42px;
-  padding-right: 42px; }
-
-.imgBox {
-  float: left; }
-
-.inline-block {
-  display: inline-block !important; }
 
 /*--layout-----------*/
 .header {
@@ -252,6 +221,40 @@ p {
   .mediaBox img {
     margin-left: 11px;
     width: 31px; }
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+body {
+  font-family: 'MicrosoftJhengHeiRegular',微軟正黑體, sans-serif; }
+
+h3, h4, h5, h6, p, li, a {
+  color: #3D1101; }
+
+h3, h4, h5 {
+  text-align: center;
+  font-weight: bold; }
+
+p {
+  line-height: 1.2em; }
+
+.max-width {
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.fixed-width {
+  padding-left: 42px;
+  padding-right: 42px; }
+
+.imgBox {
+  float: left; }
+
+.inline-block {
+  display: inline-block !important; }
+
+.border-none {
+  border: none !important; }
 
 /*index content------*/
 .secret {
@@ -369,3 +372,90 @@ p {
     position: absolute;
     bottom: 0;
     right: 0; }
+
+/*cart content------*/
+.cart_content {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.sidebar {
+  float: left;
+  width: 220px; }
+  .sidebar h5 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 32px; }
+
+.category li {
+  border-bottom: 1px solid #3D1101; }
+  .category li a {
+    display: block;
+    padding: 3px 5px;
+    line-height: 32px; }
+
+.category a:hover, .category a.active {
+  background: #3D1101;
+  color: #fff; }
+
+.cart {
+  height: 300px;
+  margin-left: 240px; }
+
+.itemList {
+  margin-right: -20px; }
+  .itemList li {
+    background: rgba(250, 250, 250, 0.7);
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    width: 220px;
+    height: 280px;
+    text-align: center;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16); }
+    .itemList li h3 {
+      font-size: 20px; }
+      .itemList li h3 span {
+        font-size: 12px; }
+      .itemList li h3 hr {
+        display: block;
+        width: 90px;
+        color: #3D1101;
+        border-top: 1px;
+        margin-bottom: 20px; }
+    .itemList li span.price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      display: block; }
+    .itemList li .addToCart {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      font-size: 16px;
+      color: #FF5E45;
+      border: 2px solid #FF5E45;
+      padding: 5px 50px; }
+  .itemList .imgBox {
+    width: 220px;
+    height: 120px;
+    overflow: hidden;
+    background: url(../assets/product_1.png);
+    background-repeat: no-repeat;
+    margin-bottom: 15px; }
+  .itemList img {
+    height: 100%;
+    max-width: auto; }
+  .itemList .loveBox {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    z-index: 5; }
