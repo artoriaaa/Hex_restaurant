@@ -16,7 +16,10 @@
   background: #efe9e7; }
 
 .orange {
-  background: #F56C23; }
+  background: #F56C23 !important; }
+
+.button-gray {
+  background: rgba(0, 0, 0, 0.35) !important; }
 
 .text-color {
   color: #3D1101; }
@@ -26,6 +29,9 @@
 
 .text-coffee {
   color: #3D1101; }
+
+.text-orange {
+  color: #F56C23; }
 
 /*css reset*/
 html, body, div, span, applet, object, iframe,
@@ -256,6 +262,12 @@ p {
 .border-none {
   border: none !important; }
 
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
 /*index content------*/
 .secret {
   padding-top: 50px;
@@ -407,6 +419,38 @@ p {
   height: 300px;
   margin-left: 240px; }
 
+.toolbar {
+  margin-bottom: 25px; }
+
+.searchbar {
+  position: relative;
+  display: inline-block; }
+  .searchbar input {
+    width: 460px;
+    border: 2px solid #3D1101;
+    height: 32px; }
+  .searchbar button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 32px;
+    padding: 0;
+    background: #3D1101; }
+
+ul.pay {
+  float: right; }
+  ul.pay li {
+    float: left;
+    padding-right: 20px;
+    border-right: 1px solid #3d1101;
+    padding: 0 10px;
+    line-height: 30px; }
+    ul.pay li:last-child {
+      border: none; }
+  ul.pay .fa-shopping-cart {
+    font-size: 20px; }
+
 .itemList {
   margin-right: -20px; }
   .itemList li {
@@ -447,15 +491,82 @@ p {
     width: 220px;
     height: 120px;
     overflow: hidden;
-    background: url(../assets/product_1.png);
-    background-repeat: no-repeat;
+    /*background:url(../assets/product_1.png);
+			background-repeat: no-repeat;*/
     margin-bottom: 15px; }
   .itemList img {
     height: 100%;
-    max-width: auto; }
+    max-width: 300px;
+    margin-left: -10px; }
   .itemList .loveBox {
     position: absolute;
-    width: 32px;
-    height: 32px;
-    background: #fff;
-    z-index: 5; }
+    /*background: #fff;*/
+    z-index: 5;
+    top: 9px;
+    left: 18px; }
+    .itemList .loveBox img {
+      width: 23px;
+      height: 20px; }
+
+/*login content------*/
+.login_content {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .login_content h1 {
+    text-align: center;
+    background: url(../assets/logo_l.svg);
+    width: 243px;
+    height: 48px;
+    margin: 0 auto;
+    margin-bottom: 8px; }
+  .login_content h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center; }
+
+.loginBox {
+  margin: 0 auto;
+  width: 300px;
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+  padding: 8px 15px 3px 15px;
+  padding-bottom: 3px;
+  border-top: 3px solid #F56C23; }
+  .loginBox form legend {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    color: #3D1101; }
+  .loginBox form label {
+    margin-top: 16px;
+    color: #3D1101; }
+  .loginBox form a {
+    font-size: 14px;
+    display: table;
+    margin-bottom: 32px; }
+  .loginBox form .pure-button {
+    padding: 6px 45px; }
+  .loginBox form input[type=password] {
+    width: 100%;
+    padding: 0 20px 0 40px;
+    line-height: 32px; }
+  .loginBox form input[type=email] {
+    width: 100%;
+    padding: 0 20px 0 40px;
+    line-height: 32px; }
+  .loginBox form i {
+    color: rgba(61, 17, 0, 0.5); }
+  .loginBox form .emailBar {
+    position: relative; }
+    .loginBox form .emailBar i {
+      position: absolute;
+      left: 10px;
+      top: 30px; }
+  .loginBox form .passwordBar {
+    position: relative; }
+    .loginBox form .passwordBar i {
+      position: absolute;
+      left: 11px;
+      top: 30px;
+      font-size: 18px; }

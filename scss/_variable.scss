@@ -36,7 +36,10 @@
 		background : $lightgray;
 	} 
 	.orange{
-		background: $orange;
+		background: $orange !important;
+	}
+	.button-gray{
+		background: rgba(0,0,0,0.35) !important;
 	}
 	
 //text color
@@ -50,3 +53,7 @@
 	.text-coffee{
 		color: $darkcoffee;
 	}
+	.text-orange{
+		color: $orange;
+	}
+

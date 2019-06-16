@@ -39,6 +39,12 @@
 	.border-none{
 		border: none !important;
 	}
+	.float-left{
+		float: left;	
+	}
+	.float-right{
+		float: right;	
+	}
 
 
 
@@ -251,6 +257,49 @@
 		height: 300px;
 		margin-left: 240px;
 	}
+
+	.toolbar{
+		margin-bottom: 25px;
+	}
+	.searchbar{
+		position: relative;
+		display: inline-block;
+
+		input{
+			width: 460px;	
+			border: 2px solid #3D1101;
+			height:32px;
+		}
+		button{
+			position: absolute;
+			top: 0;	
+			right: 0;	
+			width: 36px;	
+			height: 32px;	
+			padding: 0;
+			background:	$darkcoffee;
+		}
+	}
+
+	ul.pay{
+		float: right;	
+		li{
+			float: left;	
+			padding-right: 20px;	
+			border-right: 	1px solid #3d1101;
+			padding: 0 10px;
+			line-height: 30px;
+			&:last-child{
+				border: none;
+			}
+		}
+		.fa-shopping-cart{
+			font-size: 	20px;
+		}
+	}
+
+
+
 	.itemList{
 		margin-right: -20px;	
 		li{
@@ -299,25 +348,114 @@
 			width: 220px;
 			height: 120px;
 			overflow: hidden;
-			background:url(../assets/product_1.png);
-			background-repeat: no-repeat;
+			/*background:url(../assets/product_1.png);
+			background-repeat: no-repeat;*/
 			margin-bottom: 15px;
 
 		}
 		img{
 			height: 100%;
-			max-width: auto;
+			max-width: 300px;
+			margin-left: -10px;
 
 		}
 		.loveBox{
 			position: absolute;
-			width: 32px;
-			height: 32px;
-			background: #fff;
+			/*background: #fff;*/
 			z-index: 5;
+			top: 9px;
+			left: 18px;
+			img{
+				width: 23px;
+				height: 20px;
+			}
 		}
 
 	}
+
+/*login content------*/
+   .login_content{
+   		padding-top: 50px;	
+   		padding-bottom: 50px;	
+   		
+	   	h1{
+	   		text-align: center;
+	   		background:	url(../assets/logo_l.svg);
+	   		width: 243px;	
+	   		height: 48px;	
+	   		margin: 0 auto;	
+	   		margin-bottom: 8px;
+	   	}
+	   	h4{
+	   		font-size: 20px;
+	   		font-weight: bold;
+	   		margin-bottom: 35px;	
+	   		text-align: center;
+	   	}
+   }
+   .loginBox{
+   		margin: 0 auto;	
+	   	width: 300px;	
+	    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	    -webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	    padding: 8px 15px 3px 15px;	
+	    padding-bottom: 3px;	
+	    border-top: 3px solid $orange;
+	    form{
+	    	legend{
+		    	//font-family: NotoSansCJKtc-Black;
+		    	font-weight: bold;	
+		    	text-align: center;	
+				font-size: 18px;
+				color: #3D1101;
+			}
+			label{
+				margin-top: 16px;	
+				color: $darkcoffee;
+			}
+			a{
+				font-size: 14px;	
+				display: table;
+				margin-bottom: 	32px;
+			}
+
+			.pure-button{
+				padding: 6px 45px;
+			}
+			input[type=password]{
+				width: 100%;	
+    			padding: 0 20px 0 40px;
+    			line-height: 32px;
+			}input[type=email]{
+				width: 100%;	
+    			padding: 0 20px 0 40px;
+    			line-height: 32px;
+			}
+			i{
+				color: rgba(61,17,0,0.50);
+			}
+			.emailBar{
+				position: relative;
+				i{
+					position: absolute;
+					left: 10px;
+					top: 30px;
+				}
+			}
+			.passwordBar{
+				position: relative;
+				i{
+					position: absolute;
+					left: 11px;
+					top: 30px;
+					font-size: 18px;
+				}
+			}
+			
+	    }
+	   
+   }
+
 	
 				 
 
