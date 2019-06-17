@@ -12,7 +12,18 @@
 		height: 24px;
 		margin-top: 16px;
 		margin-bottom: 0;
-		
+    }
+    @include pad{
+    	background-position: 48% 0%;
+    }
+    @include mobile{
+    	background:url(../assets/header_mobile.png);
+    	background-position: 0% 0%;
+    	h1{
+    		br{
+    			display: block;
+    		}
+    	}
     }
   }
   .topbar{
@@ -22,16 +33,20 @@
 	float: right;
 		li{
 		float: left; 
-
-		a{	
-			display: block;
-			font-size: 16px;
-			padding: 18px 10px;
-			color: $white;
-		}
+			a{	
+				display: block;
+				font-size: 16px;
+				padding: 18px 10px;
+				color: $white;
+			}
 		}
   }
-
+  .banner{
+  	   @include mobile{
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+		}
+  }
   .banner-textBox{
 		max-width: 460px;
 		margin: 67px auto 0 auto;
@@ -39,6 +54,7 @@
 		background: rgba(0,0,0,0.35);
 		color: $white;
 		text-align: center;
+		
 		h2{
 			font-size: 48px;
 			font-size: 36px;
@@ -49,6 +65,17 @@
 			line-height: 1.2em;
 			color:$white;
 		}
+		.line-break{
+			display: none;
+			content: "";
+		}
+		@include mobile{
+			padding: 20px 8spx;
+			.line-break{
+				display:block;
+			}
+		}
+		
   }
 //footer
  .footer{
@@ -75,13 +102,17 @@
 	//width: 62.5%;
 	li{
 		float: left;
+		max-width: 320px;
+		@media(max-width: 860px){
+			max-width:235px;
+		}
+		
 	}
 	.about{
-		max-width: 320px;
-		padding-right: 20px;
+		padding-right: 22px;
 	}
 	.contact{
-		max-width: 320px;
+		max-width:205px;
 		ul{
 			max-width: 220px;
 			list-style: disc;
@@ -92,10 +123,32 @@
 			}
 		}
 	}
+	@media(max-width: 737px){
+		&>li{
+			float: none;
+			max-width:80%;
+			margin: 0 auto;
+			
+		}
+		.about{
+			margin-bottom: 30px;
+		}
+		.contact{
+			display: inline-block;
+			max-width:80%;
+			margin: 0 auto 30px auto;
+		}
+	}
  }
  .rightBox{
 	float: right;
 	text-align: right;
+	/*@media(max-width: 737px){
+		max-width: 80%;
+		margin: 0 auto;
+		float: none;
+		text-align:left;
+	}*/
  }
  .mediaBox{
 	margin-right: 3px;
@@ -105,3 +158,17 @@
 	}
  }
 
+ @media(max-width: 737px){
+ 	.rightBox{
+		max-width: 80%;
+		margin: 0 auto;
+		float: none;
+		text-align:left;
+	}
+	.mediaBox{
+		margin-right: 0px;
+		img{
+			margin-left: 0px;
+		}
+	 }
+}

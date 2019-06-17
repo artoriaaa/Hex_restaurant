@@ -33,9 +33,14 @@
 		padding-left: 42px;
 		padding-right: 42px;
 		@include pad(){
-			padding-left: 1.5%;
-			padding-right: 1.5%;
+			padding-left: 1.8%;
+			padding-right: 1.8%;
 		}
+		@include mobile{
+			padding-left: 3%;
+			padding-right: 3%;
+		}
+
 	}
 	.imgBox{
 		 float: left;
@@ -80,13 +85,24 @@
 	 		}
 	 		.imgBox{
 	 			float: none;
-				margin: 0 auto 20px auto;
+				margin: 0 auto 24px auto;
 	 			max-width: 200px;
 	 			height: 200px;
 	 			border-radius: 100px;
 	 			overflow: hidden;
 	 		}
 	     }
+	     @include mobile{
+			li{
+				width: 100%;
+				float: none;
+				margin-bottom: 30px;
+				h5{
+		 			margin-bottom: 15px;
+		 		}
+			}
+
+		  }
 	 }
 //row-todayChef
      .todayChef{
@@ -94,19 +110,60 @@
 			max-width: 470px;
 			height: 460px;
 			float: left;
+			overflow: hidden;
+			@media(max-width: 890px){
+				img{
+					max-width: 470px;
+					margin-left: -100px;
+				}
+			}
+			@media(max-width: 767px){
+				float: none;
+				margin-left: -1.8%;
+				margin-right: -1.8%;
+				max-width: 103.6%;
+				img{
+					margin-left: 0px;
+					width: 100%;
+					max-width: 100%;
+				}
+			}
+			@include mobile{
+				img{
+					width: 470px;
+					max-width: 470px;
+					margin-left: -75px;
+				}
+			}
+
+			
+			
 		}
 		.textBox{
-			float: left;
-		 	padding: 80px 0 80px 25px;
+		 	padding: 80px 0 30px 495px;
+		 	//max-width: 410px;
+		 	
 			h6{
 				color:#EFE9E7;
 				margin-bottom: 16px;
 			}
 			p{
-				max-width: 410px;
+				
 				color:#EFE9E7 ;
 
 			}
+			@media(max-width: 890px){
+				padding: 60px 0 30px 395px;
+			}
+			@include pad{
+				
+			}
+			@media(max-width: 767px){
+				padding: 50px 0 30px 0px;
+				margin: 0 auto;
+				max-width: 80%;
+			}
+			
 		}
 
       }
@@ -132,22 +189,44 @@
 				text-align: right;
 				color:rgba(61,17,1,0.75);
 			}
-		ul{
-			li{
-				width: 33.33333%;
+		
+		li{
+			width: 33.33333%;
+			float: left;
+			padding-right: 10px;
+			.imgBox{
+				width: 67px;
+				height: 67px;
 				float: left;
-				.imgBox{
-					width: 67px;
-					height: 67px;
-					float: left;
-					border-radius: 60px;
-					overflow: hidden;
-				}
+				border-radius: 60px;
+				overflow: hidden;
+			}
+			.textBox{
+				max-width: 300px;
+				padding-left: 79px;
+				//float: left;
+			}
+			@include pad{
+
+			}
+		}
+		
+		@media(max-width: 767px){
+			li{
+				width: 80%;
+				margin: 0 auto;	
+				float: none;
+				margin: 0 auto 30px auto;
 				.textBox{
-					max-width: 300px;
+					max-width:100%;
 					padding-left: 79px;
-					//float: left;
 				}
+			}
+		}
+		@include mobile{
+			li{
+				width: 100%;
+				
 			}
 		}
 	}
@@ -163,14 +242,40 @@
 		}
 		.imgBox{
 			max-width: 460px;
+			@include pad{
+				max-width: 363px;
+				height: 386px;
+				overflow: hidden;
+				img{
+					max-width: 460px;
+					height: 386px;
+				}
+			}
+			@media(max-width: 668px){
+				float: none;
+				margin: 0 auto;
+				margin-bottom: 30px;
+				max-width: 460px;
+			}
+			@include mobile{
+				
+			}
+
+
 		}
 	}
 	.reserveForm{
 		position: relative;
 		padding-left: 480px;
-		//max-width: 460px;
-		
 		color: $darkcoffee;
+		@include pad{
+			padding-left: 383px;
+		}
+		@media(max-width: 668px){
+			padding-left: 0;
+			margin: 0 auto;
+			max-width: 460px;
+		}
 		.submit{
 			background:	$orange;
 			&:hover{
@@ -218,6 +323,11 @@
 			position: absolute;
 			bottom: 0;	
 			right: 0;	
+			@media(max-width: 668px){
+				position: relative;
+				float: right;
+				margin-top: 30px;
+			}
 		}
 
 	}
