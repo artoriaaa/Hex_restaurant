@@ -131,6 +131,7 @@ button:-moz-focusring,
   text-indent: 110%;
   white-space: nowrap; }
 
+/*-------mixin 斷點-------*/
 button[type=submit] {
   margin: 0;
   padding: 6px 22px;
@@ -155,7 +156,8 @@ button[type=submit] {
     background-repeat: no-repeat;
     width: 120px;
     height: 24px;
-    margin-top: 16px; }
+    margin-top: 16px;
+    margin-bottom: 0; }
 
 .topbar {
   background: rgba(0, 0, 0, 0.75); }
@@ -194,7 +196,8 @@ button[type=submit] {
     height: 49px;
     background: url(../assets/logo_l.svg);
     background-repeat: no-repeat;
-    margin-bottom: 22px; }
+    margin-bottom: 22px;
+    margin-top: 0; }
   .footer h4 {
     font-size: 24px;
     margin-bottom: 22px;
@@ -235,6 +238,9 @@ button[type=submit] {
 body {
   font-family: 'MicrosoftJhengHeiRegular',微軟正黑體, sans-serif; }
 
+h1 {
+  margin: 0; }
+
 h3, h4, h5, h6, p, li, a {
   color: #3D1101; }
 
@@ -252,6 +258,10 @@ p {
 .fixed-width {
   padding-left: 42px;
   padding-right: 42px; }
+  @media (max-width: 768px) {
+    .fixed-width {
+      padding-left: 1.5%;
+      padding-right: 1.5%; } }
 
 .imgBox {
   float: left; }

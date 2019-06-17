@@ -12,6 +12,9 @@
 	body {
 	  font-family: 'MicrosoftJhengHeiRegular',微軟正黑體, sans-serif; }
 
+	h1{
+		margin: 0;
+	}
 	h3,h4,h5,h6,p,li,a{
 	  color: $darkcoffee;
 	}
@@ -29,6 +32,10 @@
 	.fixed-width{
 		padding-left: 42px;
 		padding-right: 42px;
+		@include pad(){
+			padding-left: 1.5%;
+			padding-right: 1.5%;
+		}
 	}
 	.imgBox{
 		 float: left;
@@ -46,6 +53,7 @@
 		float: right;	
 	}
 
+	
 
 
 

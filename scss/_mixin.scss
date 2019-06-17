@@ -20,3 +20,9 @@
 	@include hide-text;
 }
 
+/*-------mixin 斷點-------*/
+@mixin pad{
+	@media(max-width: 768px){
+		@content
+	}
+}
