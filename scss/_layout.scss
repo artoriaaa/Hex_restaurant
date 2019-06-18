@@ -56,15 +56,19 @@
 		text-align: center;
 		
 		h2{
-			font-size: 48px;
 			font-size: 36px;
 		    margin-bottom: 16px;
 		    line-height: 1.2em;
+		    @media(max-width: 376px){
+				font-size: 32px;
+			}
 		}
 		p{
 			line-height: 1.2em;
 			color:$white;
+			
 		}
+
 		.line-break{
 			display: none;
 			content: "";
@@ -75,6 +79,8 @@
 				display:block;
 			}
 		}
+
+
 		
   }
 //footer
@@ -98,8 +104,6 @@
 	  }
  }
  .info{
-	float: left;
-	//width: 62.5%;
 	li{
 		float: left;
 		max-width: 320px;
@@ -123,6 +127,17 @@
 			}
 		}
 	}
+	.rightBox{
+		float: right;
+		text-align: right;
+	 }
+	 .mediaBox{
+		margin-right: 3px;
+		img{
+			margin-left: 11px;
+			width: 31px;
+		}
+	 }
 	@media(max-width: 737px){
 		&>li{
 			float: none;
@@ -134,41 +149,23 @@
 			margin-bottom: 30px;
 		}
 		.contact{
-			display: inline-block;
 			max-width:80%;
-			margin: 0 auto 30px auto;
+			margin: 0 auto 40px auto;
 		}
+		.rightBox{
+			/*max-width: 80%;
+			margin: 0 auto;
+			float: right;
+			text-align:left;*/
+		}
+		.mediaBox{
+			margin-right: 0px;
+			img{
+				margin-left: 0px;
+			}
+	 	}
 	}
- }
- .rightBox{
-	float: right;
-	text-align: right;
-	/*@media(max-width: 737px){
-		max-width: 80%;
-		margin: 0 auto;
-		float: none;
-		text-align:left;
-	}*/
- }
- .mediaBox{
-	margin-right: 3px;
-	img{
-		margin-left: 11px;
-		width: 31px;
-	}
- }
 
- @media(max-width: 737px){
- 	.rightBox{
-		max-width: 80%;
-		margin: 0 auto;
-		float: none;
-		text-align:left;
-	}
-	.mediaBox{
-		margin-right: 0px;
-		img{
-			margin-left: 0px;
-		}
-	 }
-}
+ }
+ 
+
