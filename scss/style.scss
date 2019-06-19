@@ -383,10 +383,16 @@
 
 /*cart content------*/
    .cart_content{
+   		position: relative;
 		padding-top: 50px;
 		padding-bottom: 50px;
+		padding-right: 20px;
+		@media(max-width:735px){
+			padding-right: 1.8%;
+		}
 		@include mobile{
 			padding-bottom: 0;
+			padding-right: 3%;
 		}
 		
    }
@@ -399,7 +405,7 @@
 	
 
 	.sidebar{
-		float: left;
+		position: absolute;
 		width: 220px;
 		h5{
 			margin-bottom: 16px;
@@ -421,12 +427,19 @@
 				color: #fff;
 			}
 		}
-	
-		@include mobile{
+		
+		@media(max-width:569px){
+			position: relative;
 			float: none;
 			width: 100%;
 			background:#EFE9E7 100%;
 			margin-bottom: 25px;
+		}
+		@include mobile{
+			/*float: none;
+			width: 100%;
+			background:#EFE9E7 100%;
+			margin-bottom: 25px;*/
 		}
 		
 	}
@@ -435,45 +448,60 @@
 
 	.cart{
 		margin-left: 240px;
-		@include mobile{
+		
+		@media(max-width:569px){
 			margin-left: 0px;
+		}
+		@include mobile{
+			//margin-left: 0px;
 		}
 	}
 
 	.toolbar{
 		margin-bottom: 25px;
+
 		@media(max-width: 900px){
 			max-width: 480px;
 		}
-	}
-		.searchbar{
-			position: relative;
-			display: inline-block;
-			width: 65.714%;	
-
-			input{
-				
-				border: 2px solid #3D1101;
-				height:26px;
-				width: 96%;
-			}
-			button{
-				position: absolute;
-				top: 0;	
-				right: 0;	
-				width: 36px;	
-				height: 32px;	
-				padding: 0;
-				background:	$darkcoffee;
-				border-radius: unset;
-			}
-			@include mobile{
-				width: 100%;
-				margin-bottom: 15px;
-			}
+		@media(max-width:569px){
+			max-width: 100%;
 		}
+	}
+	.searchbar{
+		position: relative;
+		display: inline-block;
+		width: 65.714%;	
+
+		input{
+			
+			border: 2px solid #3D1101;
+			height:26px;
+			width: 96%;
+		}
+		button{
+			position: absolute;
+			top: 0;	
+			right: 0;	
+			width: 36px;	
+			height: 32px;	
+			padding: 0;
+			background:	$darkcoffee;
+			border-radius: unset;
+		}
+		@media(max-width:735px){
+			width: 300px;
+			margin-bottom: 15px;
+		}
+		@media(max-width:569px){
+			width: 100%;
+		}
+		@include mobile{
+			
+		}
+	}
 
 		ul.pay{
+			margin-right: 25px;
 			float: right;	
 			li{
 				float: left;	
@@ -486,10 +514,25 @@
 				}
 			}
 			.fa-shopping-cart{
-				font-size: 	20px;
+				font-size: 	25px;
+			}
+			@media(max-width:735px){
+				margin-right: 0;
+				/*float: none;
+				display: inline-block;//鎖定寬度
+				position: relative;
+				left: 0px;*/
+			}
+			@media(max-width:690px){
+				float: left;
+				margin-left: 190px;
+			}
+			@media(max-width:569px){
+				float: right;
+				margin-left: 0px;
 			}
 			@include mobile{
-				//margin-bottom: 30px;
+				
 			}
 		}
 
@@ -508,7 +551,6 @@
 			margin-bottom: 30px;	
 			width: 220px;
 			height: 280px;
-			//background: #df525d;
 			text-align: center;
 			box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
 			-webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
@@ -570,13 +612,13 @@
 				}
 			}
 		}
-		@include mobile{
+		@media(max-width:735px){
+			margin-right: 0;
 			margin-top: 30px;
 			li{
 				width: 300px;
-				margin: 0 auto;
 				float: none;
-				margin-bottom: 30px;
+				margin-right: 0;
 				.imgBox{
 					width: 300px;
 					img{
@@ -584,8 +626,11 @@
 					}
 				}
 			}
-			
-
+		}
+		@media(max-width:569px){
+			li{
+				margin: 0 auto 30px auto;
+			}
 		}	
 	}
 

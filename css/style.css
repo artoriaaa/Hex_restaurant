@@ -203,6 +203,9 @@ button[type=submit] {
   .banner-textBox p {
     line-height: 1.2em;
     color: rgba(255, 255, 255, 0.9); }
+  .banner-textBox .fa-cutlery {
+    margin-right: 5px;
+    margin-left: 5px; }
   .banner-textBox .line-break {
     display: none;
     content: ""; }
@@ -557,11 +560,17 @@ p {
 
 /*cart content------*/
 .cart_content {
+  position: relative;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  padding-right: 20px; }
+  @media (max-width: 735px) {
+    .cart_content {
+      padding-right: 1.8%; } }
   @media (max-width: 415px) {
     .cart_content {
-      padding-bottom: 0; } }
+      padding-bottom: 0;
+      padding-right: 3%; } }
 
 .left {
   float: left; }
@@ -570,7 +579,7 @@ p {
   float: right; }
 
 .sidebar {
-  float: left;
+  position: absolute;
   width: 220px; }
   .sidebar h5 {
     margin-bottom: 16px;
@@ -585,17 +594,24 @@ p {
   .sidebar .category a:hover, .sidebar .category a.active {
     background: #3D1101;
     color: #fff; }
-  @media (max-width: 415px) {
+  @media (max-width: 569px) {
     .sidebar {
+      position: relative;
       float: none;
       width: 100%;
       background: #EFE9E7 100%;
       margin-bottom: 25px; } }
+  @media (max-width: 415px) {
+    .sidebar {
+      /*float: none;
+			width: 100%;
+			background:#EFE9E7 100%;
+			margin-bottom: 25px;*/ } }
 
 /*右半邊*/
 .cart {
   margin-left: 240px; }
-  @media (max-width: 415px) {
+  @media (max-width: 569px) {
     .cart {
       margin-left: 0px; } }
 
@@ -604,6 +620,9 @@ p {
   @media (max-width: 900px) {
     .toolbar {
       max-width: 480px; } }
+  @media (max-width: 569px) {
+    .toolbar {
+      max-width: 100%; } }
 
 .searchbar {
   position: relative;
@@ -622,12 +641,16 @@ p {
     padding: 0;
     background: #3D1101;
     border-radius: unset; }
-  @media (max-width: 415px) {
+  @media (max-width: 735px) {
     .searchbar {
-      width: 100%;
+      width: 300px;
       margin-bottom: 15px; } }
+  @media (max-width: 569px) {
+    .searchbar {
+      width: 100%; } }
 
 ul.pay {
+  margin-right: 25px;
   float: right; }
   ul.pay li {
     float: left;
@@ -638,7 +661,22 @@ ul.pay {
     ul.pay li:last-child {
       border: none; }
   ul.pay .fa-shopping-cart {
-    font-size: 20px; }
+    font-size: 25px; }
+  @media (max-width: 735px) {
+    ul.pay {
+      margin-right: 0;
+      /*float: none;
+				display: inline-block;//鎖定寬度
+				position: relative;
+				left: 0px;*/ } }
+  @media (max-width: 690px) {
+    ul.pay {
+      float: left;
+      margin-left: 190px; } }
+  @media (max-width: 569px) {
+    ul.pay {
+      float: right;
+      margin-left: 0px; } }
 
 /*商品列表*/
 .itemList {
@@ -701,18 +739,21 @@ ul.pay {
       .itemList li .loveBox img {
         width: 23px;
         height: 20px; }
-  @media (max-width: 415px) {
+  @media (max-width: 735px) {
     .itemList {
+      margin-right: 0;
       margin-top: 30px; }
       .itemList li {
         width: 300px;
-        margin: 0 auto;
         float: none;
-        margin-bottom: 30px; }
+        margin-right: 0; }
         .itemList li .imgBox {
           width: 300px; }
           .itemList li .imgBox img {
             margin-left: 0px; } }
+  @media (max-width: 569px) {
+    .itemList li {
+      margin: 0 auto 30px auto; } }
 
 /*login content------*/
 .login_content {
