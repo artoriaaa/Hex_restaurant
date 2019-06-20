@@ -1,22 +1,41 @@
 /*--layout-----------*/
+//go to top button
+	.top{
+		width: 50px;
+	    height: 37.5px;
+	    //background: #ff5e45;
+	    background:rgba(178,34,34,1);
+	    border-radius: 50px;
+	    position: fixed;
+	    bottom: 20px;
+	    right: 10px;
+	    z-index: 30;
+	}
 //header
  .header{
-	height: 420px;
-	background:url(../assets/header_desktop.png);
-	background-repeat: no-repeat;
-	h1{
+	 height: 420px;
+	 background:url(../assets/header_desktop.png);
+	 background-repeat: no-repeat;
+	 h1{
     	float: left;
-		background:url(../assets/logo_w.svg);
-		background-repeat: no-repeat;
-		width: 120px;
-		height: 24px;
-		margin-top: 16px;
-		margin-bottom: 0;
-    }
-    @include pad{
+    	margin: 0;
+		
+		
+		a{
+			background: url(../assets/logo_w.svg);
+		    background-repeat: no-repeat;
+		    background-position: 0;
+		    display: block;
+		    width: 120px;
+		    height: 52px;
+		   
+		}
+
+     }
+     @include pad{
     	background-position: 48% 0%;
-    }
-    @include mobile{
+     }
+     @include mobile{
     	background:url(../assets/header_mobile.png);
     	background-position: 0% 0%;
     	h1{
@@ -24,27 +43,101 @@
     			display: block;
     		}
     	}
-    }
+      }
   }
   .topbar{
 	  background:rgba(0,0,0,.75);
-   }
-  .topmenu{
-	float: right;
-		li{
-		float: left; 
-			a{	
+	  z-index: 20;
+	  .fixed-width{
+	  	position: relative;
+	  }
+	  .topmenu{
+	       float: right;
+	      
+		   li{
+		   	  float: left; 
+			  &:hover{
+			  	background:$firebrick;
+			  }
+			  a{	
 				display: block;
 				font-size: 16px;
 				padding: 18px 10px;
 				color: $white;
-			}
+			  }
+		   }
+	  }
+	  .hambur{
+  			display: none;
+  			float: right;
+  			a{
+  				padding: 16px 10px 12px 10px;
+  				display: block;
+  			}
+  			i{
+  				font-size: 24px;
+  				color: #fff;
+  			}
+  		}
+
+	  @include mobile{
+	  	//
+	  	position: fixed;
+	  	top: 0;
+	  	width: 100%;
+
+	  	.topmenu{
+			height: 0;
+			transition: all .5s;
+			overflow: hidden;
+
+	  	}
+		.hambur{
+			display: block;
 		}
+	  }
+   }
+  
+
+  //hamburger menu
+
+  @include mobile{
+	  .active{
+	  	.topmenu{
+			display: block;
+			//float: none;
+			margin-top: 52px;
+			position: absolute;
+			z-index: 10;
+			width: 100%;
+			height: 160px;
+			right: 0;
+			background:rgba(0,0,0,.82);
+			li{
+				float: none;
+				text-align: center;
+				border-top: 1px dashed rgba(225,225,225,.2);
+
+			}
+	 	 }
+	 	.header{
+
+	  		//padding-top: 435px;
+	  	 }
+		.banner-textBox{
+			display: none;
+		}
+
+
+	  }
+	 
   }
+	
   .banner{
   	   @include mobile{
 			padding-left: 2.5%;
 			padding-right: 2.5%;
+			padding-top: 115px;
 		}
   }
   .banner-textBox{
@@ -77,11 +170,16 @@
 			display: none;
 			content: "";
 		}
-		@include mobile{
-			padding: 20px 8spx;
+		@media(max-width: 452px){
 			.line-break{
 				display:block;
 			}
+		}
+		@include mobile{
+			margin: 0 auto;
+			padding: 20px 8px;
+
+			
 		}
 
 

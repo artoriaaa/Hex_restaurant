@@ -146,18 +146,30 @@ button[type=submit] {
   display: inline-block; }
 
 /*--layout-----------*/
+.top {
+  width: 50px;
+  height: 37.5px;
+  background: firebrick;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 30; }
+
 .header {
   height: 420px;
   background: url(../assets/header_desktop.png);
   background-repeat: no-repeat; }
   .header h1 {
     float: left;
-    background: url(../assets/logo_w.svg);
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 24px;
-    margin-top: 16px;
-    margin-bottom: 0; }
+    margin: 0; }
+    .header h1 a {
+      background: url(../assets/logo_w.svg);
+      background-repeat: no-repeat;
+      background-position: 0;
+      display: block;
+      width: 120px;
+      height: 52px; }
   @media (max-width: 768px) {
     .header {
       background-position: 48% 0%; } }
@@ -169,22 +181,66 @@ button[type=submit] {
         display: block; } }
 
 .topbar {
-  background: rgba(0, 0, 0, 0.75); }
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 20; }
+  .topbar .fixed-width {
+    position: relative; }
+  .topbar .topmenu {
+    float: right; }
+    .topbar .topmenu li {
+      float: left; }
+      .topbar .topmenu li:hover {
+        background: #b22222; }
+      .topbar .topmenu li a {
+        display: block;
+        font-size: 16px;
+        padding: 18px 10px;
+        color: rgba(255, 255, 255, 0.9); }
+  .topbar .hambur {
+    display: none;
+    float: right; }
+    .topbar .hambur a {
+      padding: 16px 10px 12px 10px;
+      display: block; }
+    .topbar .hambur i {
+      font-size: 24px;
+      color: #fff; }
+  @media (max-width: 415px) {
+    .topbar {
+      position: fixed;
+      top: 0;
+      width: 100%; }
+      .topbar .topmenu {
+        height: 0;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        overflow: hidden; }
+      .topbar .hambur {
+        display: block; } }
 
-.topmenu {
-  float: right; }
-  .topmenu li {
-    float: left; }
-    .topmenu li a {
-      display: block;
-      font-size: 16px;
-      padding: 18px 10px;
-      color: rgba(255, 255, 255, 0.9); }
+@media (max-width: 415px) {
+  .active .topmenu {
+    display: block;
+    margin-top: 52px;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 160px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.82); }
+    .active .topmenu li {
+      float: none;
+      text-align: center;
+      border-top: 1px dashed rgba(225, 225, 225, 0.2); }
+  .active .banner-textBox {
+    display: none; } }
 
 @media (max-width: 415px) {
   .banner {
     padding-left: 2.5%;
-    padding-right: 2.5%; } }
+    padding-right: 2.5%;
+    padding-top: 115px; } }
 
 .banner-textBox {
   max-width: 460px;
@@ -209,11 +265,13 @@ button[type=submit] {
   .banner-textBox .line-break {
     display: none;
     content: ""; }
+  @media (max-width: 452px) {
+    .banner-textBox .line-break {
+      display: block; } }
   @media (max-width: 415px) {
     .banner-textBox {
-      padding: 20px 8spx; }
-      .banner-textBox .line-break {
-        display: block; } }
+      margin: 0 auto;
+      padding: 20px 8px; } }
 
 .footer {
   padding-top: 54px;
@@ -300,6 +358,9 @@ h3, h4, h5 {
 
 p {
   line-height: 1.2em; }
+
+.wrap {
+  position: relative; }
 
 .max-width {
   max-width: 1024px;
@@ -631,7 +692,8 @@ p {
   .searchbar input {
     border: 2px solid #3D1101;
     height: 26px;
-    width: 96%; }
+    width: 96%;
+    padding-left: 10px; }
   .searchbar button {
     position: absolute;
     top: 0;
@@ -641,6 +703,8 @@ p {
     padding: 0;
     background: #3D1101;
     border-radius: unset; }
+    .searchbar button:hover {
+      background: #b22222; }
   @media (max-width: 735px) {
     .searchbar {
       width: 300px;
@@ -660,8 +724,13 @@ ul.pay {
     line-height: 30px; }
     ul.pay li:last-child {
       border: none; }
+    ul.pay li a:hover {
+      color: #b22222; }
   ul.pay .fa-shopping-cart {
     font-size: 25px; }
+    ul.pay .fa-shopping-cart:hover {
+      color: #b22222;
+      font-size: 30px; }
   @media (max-width: 735px) {
     ul.pay {
       margin-right: 0;
@@ -719,6 +788,9 @@ ul.pay {
       color: #FF5E45;
       border: 2px solid #FF5E45;
       padding: 5px 50px; }
+      .itemList li .addToCart:hover {
+        background: #FF5E45;
+        color: white; }
     .itemList li .imgBox {
       width: 220px;
       height: 120px;
