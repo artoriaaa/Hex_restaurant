@@ -5,9 +5,10 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Document</title>
 
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+	
 	<script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/all.js"></script>
 
@@ -44,12 +45,13 @@
 
 <div class="cart_content fixed-width clearfix">
   <section class="sidebar">
+  		<button class="sideTest"></button>
 		<h5>線上訂購美食</h5>
 		<ul class="category">
-			<li><a href="">全部 (23)</a></li>
-			<li><a href="">只愛吃薯條(18)</a></li>
-			<li><a href="">加熱就可食(1)</a></li>
-			<li class="border-none"><a href="">不敗漢堡系列(4)</a></li>
+			<li class="c1"><a href="">全部 (7)</a></li>
+			<li class="c2"><a href="">只愛吃薯條(2)</a></li>
+			<li class="c3"><a href="">加熱就可食(1)</a></li>
+			<li class="c4 border-none"><a href="">不敗漢堡系列(4)</a></li>
 		</ul>
   </section>
   <section class="cart">
@@ -60,15 +62,19 @@
 			</div>
 			
 			<ul class="pay clearfix">
-				<li><a href="">結帳去</a></li>
+				<li class="breadcrumb"><a href="">結帳去</a></li>
 				<li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
 			</ul>
+
+			<!--<a href="" class="caculate pure-button">數量</a>
+			<span id="quantity"></span>-->
 		</div>
-		<ul class="itemList clearfix ">
+
+
+
+		<ul class="itemList clearfix c_all_products">	
 			<li><a href="">
-				<div class="loveBox">
-					<img src="assets/heart_line.svg" alt="">
-				</div>
+				<div class="loveBox"></div>
 				<div class="imgBox">
 					<img src="assets/product_1.png" alt="">
 				</div>
@@ -81,7 +87,7 @@
 			</a></li>
 
 			<li><a href="">
-				<div class="loveBox"><img src="assets/heart_line.svg" alt=""></div>
+				<div class="loveBox"></div>
 				<div class="imgBox"><img src="assets/product_2.png" alt=""></div>
 				<h3>英俊香腸<br>
 					<span>Handsome Sausage</span>
@@ -92,7 +98,7 @@
 			</a></li>
 
 			<li><a href="">
-				<div class="loveBox"><img src="assets/heart_line.svg" alt=""></div>
+				<div class="loveBox"></div>
 				<div class="imgBox"><img src="assets/product_3.png" alt=""></div>
 				<h3>漢堡兄弟<br>
 					<span>Hamburg Brothers</span>
@@ -103,7 +109,66 @@
 			</a></li>
 
 			<li><a href="">
-				<div class="loveBox"><img src="assets/heart_line.svg" alt=""></div>
+				<div class="loveBox"></div>
+				<div class="imgBox"><img src="assets/product_4.png" alt=""></div>
+				<h3>完美願望<br>
+					<span>Dragon Ball Package</span>
+					<hr>
+				</h3>
+				<span class="price">$999,999</span>
+				<a href="" class="addToCart">加入購物車</a>
+			</a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			
+		</ul>
+		<ul class="itemList clearfix c_franch_fries">
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			
+		</ul>
+		<ul class="itemList clearfix c_instant">
+			<li><a href=""></a></li>
+		</ul>
+		<ul class="itemList clearfix c_hamburgers ">
+			<li><a href="">
+				<div class="loveBox"></div>
+				<div class="imgBox">
+					<img src="assets/product_1.png" alt="">
+				</div>
+				<h3>經典漢堡套餐<br>
+					<span>Classic Hamburger Package</span>
+					<hr>
+				</h3>
+				<span class="price">$120</span>
+				<a href="" class="addToCart">加入購物車</a>
+			</a></li>
+
+			<li><a href="">
+				<div class="loveBox"></div>
+				<div class="imgBox"><img src="assets/product_2.png" alt=""></div>
+				<h3>英俊香腸<br>
+					<span>Handsome Sausage</span>
+					<hr>
+				</h3>
+				<span class="price">$1,024 </span>
+				<a href="" class="addToCart">加入購物車</a>
+			</a></li>
+
+			<li><a href="">
+				<div class="loveBox"></div>
+				<div class="imgBox"><img src="assets/product_3.png" alt=""></div>
+				<h3>漢堡兄弟<br>
+					<span>Hamburg Brothers</span>
+					<hr>
+				</h3>
+				<span class="price">$792 </span>
+				<a href="" class="addToCart">加入購物車</a>
+			</a></li>
+
+			<li><a href="">
+				<div class="loveBox"></div>
 				<div class="imgBox"><img src="assets/product_4.png" alt=""></div>
 				<h3>完美願望<br>
 					<span>Dragon Ball Package</span>
@@ -135,11 +200,11 @@
   			</li>
   			<li class="rightBox">
   				<h1 class="hide-text">六角西餐廳</h1>
-  			<div class="mediaBox">
-  				<img src="assets/gPlus.svg" alt="">
-  				<img src="assets/twitter.svg" alt="">
-  				<img src="assets/fb.svg" alt="">
-  			</div>
+	  			<div class="mediaBox">
+			        <a href=""><img src="assets/gPlus.svg" alt=""></a>
+			        <a href=""><img src="assets/twitter.svg" alt=""></a>
+			        <a href=""><img src="assets/fb.svg" alt=""></a>
+			    </div>
   			</li>
   		</ul>
   	 </div>

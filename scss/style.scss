@@ -409,7 +409,8 @@
 	
 
 	.sidebar{
-		position: absolute;
+		//position: absolute;
+		position: fixed;
 		width: 220px;
 		h5{
 			margin-bottom: 16px;
@@ -425,10 +426,20 @@
 					line-height: 32px;
 
 				}
+				
 			}
-			a:hover, a.active{
-				background:$darkcoffee;
-				color: #fff;
+			li.active{
+				a{
+					background:$darkcoffee;
+					color: #fff;
+				}
+				
+			}
+			li:hover{
+				a{
+					background:$orange;
+					color: #fff;
+				}
 			}
 		}
 		
@@ -480,7 +491,7 @@
 			
 			border: 2px solid #3D1101;
 			height:26px;
-			width: 96%;
+			width: 94%;
 			padding-left: 10px;
 			&:focus{
 		  	 
@@ -510,23 +521,36 @@
 			
 		}
 	}
-
+	//購物車
 		ul.pay{
 			margin-right: 25px;
 			float: right;	
 			li{
 				float: left;	
-				padding-right: 20px;	
-				border-right: 	1px solid #3d1101;
-				padding: 0 10px;
+				padding-left: 10px;
 				line-height: 30px;
 				&:last-child{
 					border: none;
 				}
+
 				a:hover{	
 			  		color:$firebrick;
 				}
 			}
+			//麵包屑
+				.breadcrumb::after{
+					content: "";		
+					border-right: 1px solid #3d1101;
+					padding-left: 10px;
+					
+
+				}
+			
+
+
+
+
+
 			.fa-shopping-cart{
 				font-size: 	25px;
 				&:hover{
@@ -552,6 +576,9 @@
 			@include mobile{
 				
 			}
+		}
+		#quanity{
+
 		}
 
 
@@ -624,7 +651,10 @@
 			}
 			.loveBox{
 				position: absolute;
-				/*background: #fff;*/
+				background: url(../assets/heart_line.svg);
+				width: 25px;
+				height: 22px;
+				background-repeat: no-repeat;
 				z-index: 5;
 				top: 9px;
 				left: 18px;
@@ -632,6 +662,10 @@
 					width: 23px;
 					height: 20px;
 				}
+			}
+			.heart_w{
+				background: url(../assets/heart_w.svg);
+				background-repeat: no-repeat;
 			}
 		}
 		@media(max-width:735px){
@@ -654,6 +688,9 @@
 				margin: 0 auto 30px auto;
 			}
 		}	
+	}
+	.all_products, .franch_fries, .instant{
+		display: none;
 	}
 
 /*login content------*/
@@ -704,6 +741,9 @@
 
 			.pure-button{
 				padding: 6px 45px;
+				&:hover{
+					background:#ff9797;
+				}
 			}
 			input[type=password]{
 				width: 100%;	

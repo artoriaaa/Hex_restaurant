@@ -16,10 +16,10 @@
   background: #efe9e7; }
 
 .orange {
-  background: #F56C23 !important; }
+  background: #F56C23; }
 
 .button-gray {
-  background: rgba(0, 0, 0, 0.35) !important; }
+  background: rgba(0, 0, 0, 0.35); }
 
 .text-color {
   color: #3D1101; }
@@ -136,7 +136,6 @@ button[type=submit] {
   margin: 0;
   padding: 6px 22px;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.35);
   border: 0 none;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -220,7 +219,7 @@ button[type=submit] {
         display: block; } }
 
 @media (max-width: 415px) {
-  .active .topmenu {
+  .toggle .topmenu {
     display: block;
     margin-top: 52px;
     position: absolute;
@@ -229,11 +228,11 @@ button[type=submit] {
     height: 160px;
     right: 0;
     background: rgba(0, 0, 0, 0.82); }
-    .active .topmenu li {
+    .toggle .topmenu li {
       float: none;
       text-align: center;
       border-top: 1px dashed rgba(225, 225, 225, 0.2); }
-  .active .banner-textBox {
+  .toggle .banner-textBox {
     display: none; } }
 
 @media (max-width: 415px) {
@@ -640,7 +639,7 @@ p {
   float: right; }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   width: 220px; }
   .sidebar h5 {
     margin-bottom: 16px;
@@ -652,8 +651,11 @@ p {
       display: block;
       padding: 3px 5px;
       line-height: 32px; }
-  .sidebar .category a:hover, .sidebar .category a.active {
+  .sidebar .category li.active a {
     background: #3D1101;
+    color: #fff; }
+  .sidebar .category li:hover a {
+    background: #F56C23;
     color: #fff; }
   @media (max-width: 569px) {
     .sidebar {
@@ -692,7 +694,7 @@ p {
   .searchbar input {
     border: 2px solid #3D1101;
     height: 26px;
-    width: 96%;
+    width: 94%;
     padding-left: 10px; }
   .searchbar button {
     position: absolute;
@@ -718,14 +720,16 @@ ul.pay {
   float: right; }
   ul.pay li {
     float: left;
-    padding-right: 20px;
-    border-right: 1px solid #3d1101;
-    padding: 0 10px;
+    padding-left: 10px;
     line-height: 30px; }
     ul.pay li:last-child {
       border: none; }
     ul.pay li a:hover {
       color: #b22222; }
+  ul.pay .breadcrumb::after {
+    content: "";
+    border-right: 1px solid #3d1101;
+    padding-left: 10px; }
   ul.pay .fa-shopping-cart {
     font-size: 25px; }
     ul.pay .fa-shopping-cart:hover {
@@ -804,13 +808,19 @@ ul.pay {
         margin-left: -10px; }
     .itemList li .loveBox {
       position: absolute;
-      /*background: #fff;*/
+      background: url(../assets/heart_line.svg);
+      width: 25px;
+      height: 22px;
+      background-repeat: no-repeat;
       z-index: 5;
       top: 9px;
       left: 18px; }
       .itemList li .loveBox img {
         width: 23px;
         height: 20px; }
+    .itemList li .heart_w {
+      background: url(../assets/heart_w.svg);
+      background-repeat: no-repeat; }
   @media (max-width: 735px) {
     .itemList {
       margin-right: 0;
@@ -826,6 +836,9 @@ ul.pay {
   @media (max-width: 569px) {
     .itemList li {
       margin: 0 auto 30px auto; } }
+
+.all_products, .franch_fries, .instant {
+  display: none; }
 
 /*login content------*/
 .login_content {
@@ -866,6 +879,8 @@ ul.pay {
     margin-bottom: 32px; }
   .loginBox form .pure-button {
     padding: 6px 45px; }
+    .loginBox form .pure-button:hover {
+      background: #ff9797; }
   .loginBox form input[type=password] {
     width: 100%;
     padding: 0 20px 0 40px;
