@@ -387,10 +387,12 @@
 
 /*cart content------*/
    .cart_content{
+   		//background: rgba(250,250,250,0.70);
    		position: relative;
 		padding-top: 50px;
 		padding-bottom: 50px;
 		padding-right: 20px;
+		border-bottom: 1.5px dotted rgba(61,17,0,0.3);
 		@media(max-width:735px){
 			padding-right: 1.8%;
 		}
@@ -424,9 +426,7 @@
 					display: block;
 					padding: 3px 5px;
 					line-height: 32px;
-
 				}
-				
 			}
 			li.active{
 				a{
@@ -521,7 +521,7 @@
 			
 		}
 	}
-	//購物車
+	/*購物車*/
 		ul.pay{
 			margin-right: 25px;
 			float: right;	
@@ -689,7 +689,7 @@
 			}
 		}	
 	}
-	.all_products, .franch_fries, .instant{
+	.c_hamburgers, .c_franch_fries, .c_instant{
 		display: none;
 	}
 

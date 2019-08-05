@@ -1,6 +1,6 @@
 $(document).ready(function($) {
 
-	//漢堡選單 
+//漢堡選單 
 	$('.hambur').click(function(event) {
 		/* Act on the event */
 		event.preventDefault();
@@ -8,7 +8,7 @@ $(document).ready(function($) {
 
 	});
 
-	//至頂按鈕
+//至頂按鈕
 	$('.top').click(function(event) {
 		/* Act on the event */
 		event.preventDefault();
@@ -17,8 +17,7 @@ $(document).ready(function($) {
 			860);
 	});
 
-	//sidebar
-
+//sidebar
 	$('.category li').click(function(event) {
 		/* Act on the event */
 		event.preventDefault();
@@ -43,18 +42,13 @@ $(document).ready(function($) {
 
 		}
 		if($(this).hasClass('c4')){
-			
+
 			$('.c_hamburgers').css('display','block');
 			$('.c_hamburgers').siblings('.itemList').css('display','none');
-
 		}
-
-		
-
-		
 	});
 
-	//購物車愛心
+//購物車愛心
 	$('.loveBox').click(function(event) {
 		/* Act on the event */
 		event.preventDefault();
@@ -66,8 +60,7 @@ $(document).ready(function($) {
 		event.preventDefault();
 	});
 
-
-	//購物車數量
+//購物車數量
 	$('.caculate').click(function(){
 		event.preventDefault();
 	//var i=$('div').size();//获得div标签的数目
@@ -77,33 +70,21 @@ $(document).ready(function($) {
 
 	});
 
-
-
-
-
+$(window).scroll(function(){
+     //最後一頁scrollTop=body-window，space是預留空間
+     var space=240;
+     last=$("body").height()-$(window).height()-space
+     if($(window).scrollTop()>=last){
+	    $('.sidebar').css({
+			position: 'absolute',
+			bottom:'80px'
+		});
+     }else if($(window).scrollTop()<last){
+     	 $('.sidebar').css({
+			position: 'fixed',
+			bottom:'inherit'
+		});
+     }
+})
 });
 
-$(function(){   
-
-    $(window).scroll(function () {
-        var scrollVal = $(this).scrollTop();
-        var catecrtop=$(".cart_content .sidebar").offset().top;
-        if(scrollVal>adscrtop){
-        	alert('好');
-        }
-
-      /*  if(window.innerWidth>767){ //RWD 767以下寬不動作
-	         if(scrollVal>adscrtop){
-	            $(".div-img").css({"position": "fixed","top": "0px"});          
-	         }else{
-	            $(".div-img").css({"position": "static"});
-	         }
-
-	    }else{
-         	$(".div-img").css({"position": "static"});
-        }*/
-
-    });
-
-
-});

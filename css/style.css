@@ -147,8 +147,8 @@ button[type=submit] {
 /*--layout-----------*/
 .top {
   width: 50px;
-  height: 37.5px;
-  background: firebrick;
+  height: 42.5px;
+  background: url(../assets/hambur-01.svg);
   border-radius: 50px;
   position: fixed;
   bottom: 20px;
@@ -623,7 +623,8 @@ p {
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  border-bottom: 1.5px dotted rgba(61, 17, 0, 0.3); }
   @media (max-width: 735px) {
     .cart_content {
       padding-right: 1.8%; } }
@@ -715,6 +716,7 @@ p {
     .searchbar {
       width: 100%; } }
 
+/*購物車*/
 ul.pay {
   margin-right: 25px;
   float: right; }
@@ -837,7 +839,7 @@ ul.pay {
     .itemList li {
       margin: 0 auto 30px auto; } }
 
-.all_products, .franch_fries, .instant {
+.c_hamburgers, .c_franch_fries, .c_instant {
   display: none; }
 
 /*login content------*/
