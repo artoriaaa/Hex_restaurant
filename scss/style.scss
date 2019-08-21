@@ -4,7 +4,7 @@
 @import "mixin";
 @import "modules";
 @import "layout";
-//main
+//utilities
 	* {
 	  box-sizing: border-box;
 	  -webkit-box-sizing: border-box; }
@@ -63,13 +63,6 @@
 	.no-margin-bottom{
 		margin-bottom: 0;
 	}
-
-
-	
-
-
-
-
 /*index content------*/
 //row-secret
 	 .secret{
@@ -204,9 +197,6 @@
 			}
 			@media(max-width: 890px){
 				padding: 60px 0 30px 395px;
-			}
-			@include pad{
-				
 			}
 			@media(max-width: 767px){
 				padding: 50px 0 30px 0px;
