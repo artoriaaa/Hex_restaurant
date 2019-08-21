@@ -528,32 +528,37 @@
 				}
 			}
 			//麵包屑
-				.breadcrumb::after{
-					content: "";		
-					border-right: 1px solid #3d1101;
-					padding-left: 10px;
-					
-
-				}
-			
-
-
-
-
+			.breadcrumb::after{
+				content: "";		
+				border-right: 1px solid #3d1101;
+				padding-left: 10px;
+			}
 
 			.fa-shopping-cart{
-				font-size: 	25px;
+				font-size: 	30px;
+				position: relative;
 				&:hover{
 				  	color:$firebrick;
 				  	font-size: 30px;
 				  }
+				.cartNum{
+					width: 15px;
+					height: 15px;
+					position: absolute;
+					border-radius: 10px;
+					background:#FF5E45;
+					top: 0;
+					right: -6px;
+					border:1px solid $lightgray;
+					color:#fff;
+					font-size: 12px;
+					text-align: center;
+					line-height: 12px;
+				}
 			}
 			@media(max-width:735px){
 				margin-right: 0;
-				/*float: none;
-				display: inline-block;//鎖定寬度
-				position: relative;
-				left: 0px;*/
+				
 			}
 			@media(max-width:690px){
 				float: left;
@@ -567,9 +572,7 @@
 				
 			}
 		}
-		#quanity{
-
-		}
+	
 
 
 	/*商品列表*/
@@ -624,6 +627,10 @@
 					background:#FF5E45;
 					color:white;
 				}
+			}
+			.inCart{
+				background:#FF5E45;
+				color:white;
 			}
 			.imgBox{
 				width: 220px;

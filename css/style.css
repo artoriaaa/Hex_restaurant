@@ -733,17 +733,27 @@ ul.pay {
     border-right: 1px solid #3d1101;
     padding-left: 10px; }
   ul.pay .fa-shopping-cart {
-    font-size: 25px; }
+    font-size: 30px;
+    position: relative; }
     ul.pay .fa-shopping-cart:hover {
       color: #b22222;
       font-size: 30px; }
+    ul.pay .fa-shopping-cart .cartNum {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      border-radius: 10px;
+      background: #FF5E45;
+      top: 0;
+      right: -6px;
+      border: 1px solid #efe9e7;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      line-height: 12px; }
   @media (max-width: 735px) {
     ul.pay {
-      margin-right: 0;
-      /*float: none;
-				display: inline-block;//鎖定寬度
-				position: relative;
-				left: 0px;*/ } }
+      margin-right: 0; } }
   @media (max-width: 690px) {
     ul.pay {
       float: left;
@@ -797,6 +807,9 @@ ul.pay {
       .itemList li .addToCart:hover {
         background: #FF5E45;
         color: white; }
+    .itemList li .inCart {
+      background: #FF5E45;
+      color: white; }
     .itemList li .imgBox {
       width: 220px;
       height: 120px;
