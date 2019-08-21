@@ -56,11 +56,27 @@ $(document).ready(function($) {
 		$(this).toggleClass('heart_w');
 	});
 
+//購物車數量
+var items=[];
+
 	$('.addToCart').click(function(event) {
 		event.preventDefault();
+		if($(this).text()=='加入購物車'){
+			items.push(1);
+			$(this).text('移除項目');
+			$(this).toggleClass('inCart');
+		}else if($(this).text()=='移除項目'){
+			items.splice(0,1);
+			$(this).text('加入購物車');
+			$(this).toggleClass('inCart');
+		}
+		
+		
+		$('.cartNum').text(items.length);
+
 	});
 
-//購物車數量
+
 	$('.caculate').click(function(){
 		event.preventDefault();
 	//var i=$('div').size();//获得div标签的数目
@@ -70,21 +86,6 @@ $(document).ready(function($) {
 
 	});
 
-$(window).scroll(function(){
-     //最後一頁scrollTop=body-window，space是預留空間
-     var space=240;
-     last=$("body").height()-$(window).height()-space
-     if($(window).scrollTop()>=last){
-	    $('.sidebar').css({
-			position: 'absolute',
-			bottom:'80px'
-		});
-     }else if($(window).scrollTop()<last){
-     	 $('.sidebar').css({
-			position: 'fixed',
-			bottom:'inherit'
-		});
-     }
-})
+
 });
 
