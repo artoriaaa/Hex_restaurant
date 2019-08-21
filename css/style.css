@@ -639,8 +639,9 @@ p {
 .right {
   float: right; }
 
+/*左半邊*/
 .sidebar {
-  position: fixed;
+  position: absolute;
   width: 220px; }
   .sidebar h5 {
     margin-bottom: 16px;

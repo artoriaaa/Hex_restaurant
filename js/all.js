@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+ $(document).ready(function($) {
 
 //漢堡選單 
 	$('.hambur').click(function(event) {
@@ -69,22 +69,40 @@ $(document).ready(function($) {
 	//alert('好');
 
 	});
-
+//sidebar 滑動
 $(window).scroll(function(){
-     //最後一頁scrollTop=body-window，space是預留空間
-     var space=240;
-     last=$("body").height()-$(window).height()-space
-     if($(window).scrollTop()>=last){
-	    $('.sidebar').css({
-			position: 'absolute',
-			bottom:'80px'
+    //scrollTop=body-window，space是預留空間
+    var space=240;
+    last=$("body").height()-$(window).height()-space
+
+    if(window.matchMedia('(min-width: 569px)').matches){
+     	if($(window).scrollTop()<last && $(window).scrollTop()>420){
+       //還沒捲到到底部
+	        $('.sidebar').css({
+				position: 'fixed', 
+				top:'20px'
+			});
+	    }else if($(window).scrollTop()>=last){//表示已捲動到底部範圍、侧欄固定
+		    $('.sidebar').css({
+				position: 'absolute',
+				bottom:'80px',
+				top:'inherit'
+			});
+	     }else{
+	     	 $('.sidebar').css({
+				position: 'absolute',
+				top:'inherit',
+				bottom:'inherit'
+			});
+	     }
+	 }else{
+	 	 $('.sidebar').css({
+				position: 'relative',
+				top:'inherit',
+				bottom:'inherit'
 		});
-     }else if($(window).scrollTop()<last){
-     	 $('.sidebar').css({
-			position: 'fixed',
-			bottom:'inherit'
-		});
-     }
+	 }
+
 })
 });
 

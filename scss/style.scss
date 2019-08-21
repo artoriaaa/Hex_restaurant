@@ -399,10 +399,10 @@
 			float: right;
 		}
 	
-
+	/*左半邊*/
 	.sidebar{
-		//position: absolute;
-		position: fixed;
+		position: relative;
+		//position: fixed;
 		width: 220px;
 		h5{
 			margin-bottom: 16px;
