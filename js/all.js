@@ -17,7 +17,7 @@
 			860);
 	});
 
-//sidebar
+//sidebar清單
 	$('.category li').click(function(event) {
 		/* Act on the event */
 		event.preventDefault();
@@ -55,13 +55,15 @@
 		//$(this).find('img').attr('src','assets/heart_w.svg');
 		$(this).toggleClass('heart_w');
 	});
+
 //購物車數量
-var items=[];
+	var items=[];
 
 	$('.addToCart').click(function(event) {
 		event.preventDefault();
 		if($(this).text()=='加入購物車'){
 			items.push(1);
+			$('.cartNum').css('display', 'block');
 			$(this).text('移除項目');
 			$(this).toggleClass('inCart');
 		}else if($(this).text()=='移除項目'){
@@ -75,43 +77,39 @@ var items=[];
 
 	});
 
-
-
 //sidebar 滑動
-$(window).scroll(function(){
-    //scrollTop=body-window，space是預留空間
-    var space=240;
-    last=$("body").height()-$(window).height()-space
+	$(window).scroll(function(){
+	    //scrollTop=body-window，space是預留空間
+	    var space=240;
+	    last=$("body").height()-$(window).height()-space
 
-    if(window.matchMedia('(min-width: 569px)').matches){
-     	if($(window).scrollTop()<last && $(window).scrollTop()>420){
-       //還沒捲到到底部
-	        $('.sidebar').css({
-				position: 'fixed', 
-				top:'20px'
-			});
-	    }else if($(window).scrollTop()>=last){//表示已捲動到底部範圍、侧欄固定
-		    $('.sidebar').css({
-				position: 'absolute',
-				bottom:'80px',
-				top:'inherit'
-			});
-	     }else{
-	     	 $('.sidebar').css({
-				position: 'absolute',
-				top:'inherit',
-				bottom:'inherit'
-			});
-	     }
-	 }else{
-	 	 $('.sidebar').css({
-				position: 'absolute',
-				top:'inherit',
-				bottom:'inherit'
-		});
-	 }
-
-})
-
+	    if(window.matchMedia('(min-width: 569px)').matches){
+	     	if($(window).scrollTop()<last && $(window).scrollTop()>420){
+	       //還沒捲到到底部
+		        $('.sidebar').css({
+					position: 'fixed', 
+					top:'20px'
+				});
+		    }else if($(window).scrollTop()>=last){//表示已捲動到底部範圍、侧欄固定
+			    $('.sidebar').css({
+					position: 'absolute',
+					bottom:'80px',
+					top:'inherit'
+				});
+		     }else{
+		     	 $('.sidebar').css({
+					position: 'absolute',
+					top:'inherit',
+					bottom:'inherit'
+				});
+		     }
+		 }else{
+		 	 $('.sidebar').css({
+					position: 'absolute',
+					top:'inherit',
+					bottom:'inherit'
+			 });
+		 }
+	 })
 });
 

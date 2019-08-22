@@ -359,9 +359,7 @@ p {
   line-height: 1.2em; }
 
 .wrap {
-  position: relative; }
-
-.max-width {
+  position: relative;
   max-width: 1024px;
   margin: 0 auto; }
 
@@ -415,7 +413,7 @@ p {
       float: none;
       margin: 0 auto 24px auto;
       max-width: 200px;
-      height: 200px;
+      max-height: 200px;
       border-radius: 100px;
       overflow: hidden; }
   @media (max-width: 668px) {
@@ -425,8 +423,8 @@ p {
       .secret li h5 {
         margin-top: 35px;
         margin-bottom: 15px;
-        text-align: left;
-        padding-left: 225px; }
+        padding-left: 225px;
+        text-align: left; }
       .secret li p {
         padding-left: 225px; }
       .secret li .imgBox {
@@ -644,6 +642,8 @@ p {
   position: absolute;
   width: 220px; }
   .sidebar h5 {
+    background: url(../assets/leaf.png) no-repeat;
+    background-size: 26px 32px;
     margin-bottom: 16px;
     font-size: 20px;
     line-height: 32px; }
@@ -661,17 +661,13 @@ p {
     color: #fff; }
   @media (max-width: 569px) {
     .sidebar {
-      position: relative;
       float: none;
-      width: 96%;
+      width: 96.4%;
       background: #EFE9E7 100%;
       margin-bottom: 25px; } }
   @media (max-width: 415px) {
     .sidebar {
-      /*float: none;
-			width: 100%;
-			background:#EFE9E7 100%;
-			margin-bottom: 25px;*/ } }
+      width: 94%; } }
 
 /*右半邊*/
 .cart {
@@ -741,6 +737,7 @@ ul.pay {
       color: #b22222;
       font-size: 30px; }
     ul.pay .fa-shopping-cart .cartNum {
+      display: none;
       width: 15px;
       height: 15px;
       position: absolute;

@@ -18,18 +18,14 @@
 	 h1{
     	float: left;
     	margin: 0;
-		
-		
 		a{
 			background: url(../assets/logo_w.svg);
 		    background-repeat: no-repeat;
 		    background-position: 0;
 		    display: block;
 		    width: 120px;
-		    height: 52px;
-		   
+		    height: 52px;   
 		}
-
      }
      @include pad{
     	background-position: 48% 0%;
@@ -42,7 +38,7 @@
     			display: block;
     		}
     	}
-      }
+     }
   }
   .topbar{
 	  background:rgba(0,0,0,.75);
@@ -80,16 +76,13 @@
   		}
 
 	  @include mobile{
-	  	//
 	  	position: fixed;
 	  	top: 0;
 	  	width: 100%;
-
 	  	.topmenu{
 			height: 0;
 			transition: all .5s;
 			overflow: hidden;
-
 	  	}
 		.hambur{
 			display: block;
@@ -104,7 +97,6 @@
 	  .toggle{
 	  	.topmenu{
 			display: block;
-			//float: none;
 			margin-top: 52px;
 			position: absolute;
 			z-index: 10;
@@ -116,20 +108,12 @@
 				float: none;
 				text-align: center;
 				border-top: 1px dashed rgba(225,225,225,.2);
-
 			}
 	 	 }
-	 	.header{
-
-	  		//padding-top: 435px;
-	  	 }
 		.banner-textBox{
 			display: none;
 		}
-
-
-	  }
-	 
+	 } 
   }
 	
   .banner{
@@ -157,8 +141,7 @@
 		}
 		p{
 			line-height: 1.2em;
-			color:$white;
-			
+			color:$white;		
 		}
 		.fa-cutlery{
 			margin-right: 5px;
@@ -176,13 +159,8 @@
 		}
 		@include mobile{
 			margin: 0 auto;
-			padding: 20px 8px;
-
-			
-		}
-
-
-		
+			padding: 20px 8px;			
+		}	
   }
 //footer
  .footer{
@@ -210,8 +188,7 @@
 		max-width: 320px;
 		@media(max-width: 860px){
 			max-width:235px;
-		}
-		
+		}	
 	}
 	.about{
 		padding-right: 22px;
@@ -243,8 +220,7 @@
 		&>li{
 			float: none;
 			max-width:80%;
-			margin: 0 auto;
-			
+			margin: 0 auto;		
 		}
 		.about{
 			margin-bottom: 30px;
@@ -266,7 +242,6 @@
 			}
 	 	}
 	}
-
- }
+}
  
 

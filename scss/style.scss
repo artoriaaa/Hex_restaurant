@@ -1,4 +1,4 @@
-//variable
+
 @import "variable";
 @import "reset"; 
 @import "mixin";
@@ -27,8 +27,6 @@
 	}
 	.wrap{
 		position: relative;
-	}
-	.max-width{
 		max-width: 1024px;
 		margin: 0 auto;
 	}
@@ -87,22 +85,20 @@
 	 			float: none;
 				margin: 0 auto 24px auto;
 	 			max-width: 200px;
-	 			height: 200px;
+	 			max-height: 200px;
 	 			border-radius: 100px;
 	 			overflow: hidden;
 	 		}
 	     }
 	     @media(max-width: 668px){
-	     	
 			li{
 				width: 100%;
 				margin:0 auto 30px auto;
-				//margin-bottom: 30px;
 				h5{
 					margin-top: 35px;
 		 			margin-bottom: 15px;
-		 			text-align: left;
 		 			padding-left: 225px;
+		 			text-align: left;
 		 		}
 		 		p{
 					padding-left: 225px;
@@ -115,7 +111,6 @@
 		 			border-radius: 100px;
 		 			overflow: hidden;
 		 		}
-	
 			}
 	     }
 	     @media(max-width: 500px){
@@ -137,12 +132,7 @@
 		 			overflow: hidden;
 		 		}
 			}
-
-
-		  }
-		  @include mobile{
-
-		  }	
+		 }	
 	 }
 //row-todayChef
      .todayChef{
@@ -177,23 +167,16 @@
 					max-width: 490px;
 					margin-left: -75px;
 				}
-			}
-
-			
-			
+			}		
 		}
 		.textBox{
-		 	padding: 80px 0 30px 495px;
-		 	//max-width: 410px;
-		 	
+		 	padding: 80px 0 30px 495px;	
 			h6{
 				color:#EFE9E7;
 				margin-bottom: 16px;
 			}
-			p{
-				
+			p{			
 				color:#EFE9E7 ;
-
 			}
 			@media(max-width: 890px){
 				padding: 60px 0 30px 395px;
@@ -206,14 +189,11 @@
 			@include mobile{
 				padding-bottom: 50px;
 			}
-			
 		}
-
       }
 //row-feedback
 	.feedback{
 		padding:50px 0;
-
 		h4{
 			margin-bottom: 32px;
 			font-size: $font-l;
@@ -232,7 +212,6 @@
 				text-align: right;
 				color:rgba(61,17,1,0.75);
 			}
-		
 		li{
 			width: 33.33333%;
 			float: left;
@@ -303,8 +282,6 @@
 			@include mobile{
 				
 			}
-
-
 		}
 	}
 	.reserveForm{
@@ -372,7 +349,6 @@
 				margin-top: 30px;
 			}
 		}
-
 	}
 
 /*cart content------*/
@@ -389,12 +365,11 @@
 		@include mobile{
 			padding-bottom: 0;
 			padding-right: 3%;
-		}
-		
+		}	
    }
    		.left{
 			float: left;
-			}
+		}
 		.right{
 			float: right;
 		}
@@ -402,9 +377,10 @@
 	/*左半邊*/
 	.sidebar{
 		position: absolute;
-		//position: fixed;
 		width: 220px;
 		h5{
+			background:url(../assets/leaf.png) no-repeat;
+			background-size: 26px 32px;
 			margin-bottom: 16px;
 			font-size: 20px;
 			line-height: 32px;
@@ -422,8 +398,7 @@
 				a{
 					background:$darkcoffee;
 					color: #fff;
-				}
-				
+				}	
 			}
 			li:hover{
 				a{
@@ -432,33 +407,24 @@
 				}
 			}
 		}
-		
 		@media(max-width:569px){
-			position: relative;
 			float: none;
-			width: 96%;
+			width: 96.4%;
 			background:#EFE9E7 100%;
 			margin-bottom: 25px;
-		}
-		@include mobile{
-			/*float: none;
-			width: 100%;
-			background:#EFE9E7 100%;
-			margin-bottom: 25px;*/
-		}
-		
+		}		
+		@media(max-width:415px){
+			width: 94%;	
+		}		
+
 	}
 
 	/*右半邊*/
-
 	.cart{
 		margin-left: 240px;
 		
 		@media(max-width:569px){
 			margin-left: 0px;
-		}
-		@include mobile{
-			//margin-left: 0px;
 		}
 	}
 
@@ -543,6 +509,7 @@
 				  	font-size: 30px;
 				  }
 				.cartNum{
+					display: none;
 					width: 15px;
 					height: 15px;
 					position: absolute;
@@ -771,10 +738,8 @@
 					top: 30px;
 					font-size: 18px;
 				}
-			}
-			
-	    }
-	   
+			}	
+	    }   
    }
 
 	
