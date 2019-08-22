@@ -401,7 +401,7 @@
 	
 	/*左半邊*/
 	.sidebar{
-		position: relative;
+		position: absolute;
 		//position: fixed;
 		width: 220px;
 		h5{
@@ -436,7 +436,7 @@
 		@media(max-width:569px){
 			position: relative;
 			float: none;
-			width: 100%;
+			width: 96%;
 			background:#EFE9E7 100%;
 			margin-bottom: 25px;
 		}
@@ -506,6 +506,7 @@
 		}
 		@media(max-width:569px){
 			width: 100%;
+			margin-top: 230px;
 		}
 		@include mobile{
 			

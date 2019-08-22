@@ -49,26 +49,8 @@
 	});
 
 //購物車愛心
-	$('.loveBox').click(function(event) {
-		/* Act on the event */
-		event.preventDefault();
-		//$(this).find('img').attr('src','assets/heart_w.svg');
-		$(this).toggleClass('heart_w');
-	});
 
-	$('.addToCart').click(function(event) {
-		event.preventDefault();
-	});
 
-//購物車數量
-	$('.caculate').click(function(){
-		event.preventDefault();
-	//var i=$('div').size();//获得div标签的数目
-	//var x=$('.heart_w').size();   //获得class为mm的font标签的数目
-	//$('#quantity').html('購物車'+x+'件物品');
-	//alert('好');
-
-	});
 //sidebar 滑動
 $(window).scroll(function(){
     //scrollTop=body-window，space是預留空間
@@ -97,7 +79,7 @@ $(window).scroll(function(){
 	     }
 	 }else{
 	 	 $('.sidebar').css({
-				position: 'relative',
+				position: 'absolute',
 				top:'inherit',
 				bottom:'inherit'
 		});
