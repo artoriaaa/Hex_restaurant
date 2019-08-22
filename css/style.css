@@ -639,8 +639,9 @@ p {
 .right {
   float: right; }
 
+/*左半邊*/
 .sidebar {
-  position: fixed;
+  position: absolute;
   width: 220px; }
   .sidebar h5 {
     margin-bottom: 16px;
@@ -662,7 +663,7 @@ p {
     .sidebar {
       position: relative;
       float: none;
-      width: 100%;
+      width: 96%;
       background: #EFE9E7 100%;
       margin-bottom: 25px; } }
   @media (max-width: 415px) {
@@ -714,7 +715,8 @@ p {
       margin-bottom: 15px; } }
   @media (max-width: 569px) {
     .searchbar {
-      width: 100%; } }
+      width: 100%;
+      margin-top: 230px; } }
 
 /*購物車*/
 ul.pay {
