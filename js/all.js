@@ -49,6 +49,32 @@
 	});
 
 //購物車愛心
+   	$('.loveBox').click(function(event) {
+		/* Act on the event */
+		event.preventDefault();
+		//$(this).find('img').attr('src','assets/heart_w.svg');
+		$(this).toggleClass('heart_w');
+	});
+//購物車數量
+var items=[];
+
+	$('.addToCart').click(function(event) {
+		event.preventDefault();
+		if($(this).text()=='加入購物車'){
+			items.push(1);
+			$(this).text('移除項目');
+			$(this).toggleClass('inCart');
+		}else if($(this).text()=='移除項目'){
+			items.splice(0,1);
+			$(this).text('加入購物車');
+			$(this).toggleClass('inCart');
+		}
+		
+		
+		$('.cartNum').text(items.length);
+
+	});
+
 
 
 //sidebar 滑動
@@ -86,5 +112,6 @@ $(window).scroll(function(){
 	 }
 
 })
+
 });
 
